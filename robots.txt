@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Adicionar Sitemap somente quando o domínio final estiver definido.
