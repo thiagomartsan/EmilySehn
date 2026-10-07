@@ -144,12 +144,12 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 /* bloco escuta em duas cores */
 .clinical{position:relative;overflow:hidden;min-height:520px}
 .clinical-split{position:absolute;inset-block:0}
-.clinical-split--dark{left:0;width:58%;background:var(--dark)}
-.clinical-split--sand{right:0;width:42%;background:var(--paper-2)}
-.clinical-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(56px,8vw,120px);padding-block:clamp(82px,8vw,112px)}
-.clinical-title{color:var(--white)}
+.clinical-split--dark{left:0;width:56%;background:var(--dark)}
+.clinical-split--sand{right:0;width:44%;background:var(--paper-2)}
+.clinical-inner{position:relative;z-index:3;display:grid;grid-template-columns:56% 44%;align-items:center;gap:0;padding-block:clamp(82px,8vw,112px)}
+.clinical-title{color:var(--white);padding-right:clamp(40px,6vw,88px)}
 .clinical h2{margin:0;max-width:630px;font-size:clamp(2.35rem,4.4vw,4.4rem)}
-.clinical-copy{max-width:560px;color:var(--ink);font-size:1rem}
+.clinical-copy{max-width:560px;color:var(--ink);font-size:1rem;padding-left:clamp(38px,5vw,72px)}
 .clinical-copy p{margin:0 0 17px}
 .clinical-flower-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .floating-flower--clinical{z-index:2;width:170px;left:50%;bottom:-50px;opacity:.24;animation:flowerSlide 18s ease-in-out infinite alternate}
@@ -269,7 +269,7 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
   .hero-inner{grid-template-columns:1fr .7fr;gap:24px}
   .floating-flower--hero{right:16%;width:165px}
   .editorial-grid{grid-template-columns:60px 1fr 1fr;gap:34px}
-  .clinical-inner{gap:55px}
+  .clinical-inner{gap:0}
 }
 
 @media(max-width:760px){
@@ -312,6 +312,8 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
   .clinical-split--dark{width:100%;height:48%;bottom:auto}
   .clinical-split--sand{top:auto;bottom:0;width:100%;height:52%}
   .clinical-inner{grid-template-columns:1fr;gap:76px;padding-block:64px}
+  .clinical-title{padding-right:0}
+  .clinical-copy{padding-left:0}
   .clinical h2{font-size:clamp(2.05rem,9vw,3.2rem)}
   .floating-flower--clinical{left:auto;right:-30px;bottom:40%;width:125px}
 
