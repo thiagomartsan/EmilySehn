@@ -3,20 +3,41 @@ document.documentElement.classList.add('js');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
+const mobileMenuQuery = window.matchMedia('(max-width: 1020px)');
+
+function syncMenuAccessibility() {
+  if (!menuToggle || !nav) return;
+  const isMobile = mobileMenuQuery.matches;
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+
+  if (isMobile && !isOpen) {
+    nav.setAttribute('inert', '');
+    nav.setAttribute('aria-hidden', 'true');
+  } else {
+    nav.removeAttribute('inert');
+    nav.removeAttribute('aria-hidden');
+  }
+}
+
 function closeMenu() {
   if (!menuToggle || !nav) return;
   nav.classList.remove('open');
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.setAttribute('aria-label', 'Abrir menu');
   document.body.classList.remove('menu-open');
+  syncMenuAccessibility();
 }
 
 if (menuToggle && nav) {
+  syncMenuAccessibility();
+
   menuToggle.addEventListener('click', () => {
     const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
     if (isOpen) {
       closeMenu();
     } else {
+      nav.removeAttribute('inert');
+      nav.removeAttribute('aria-hidden');
       nav.classList.add('open');
       menuToggle.setAttribute('aria-expanded', 'true');
       menuToggle.setAttribute('aria-label', 'Fechar menu');
@@ -28,6 +49,17 @@ if (menuToggle && nav) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
   });
+
+  const handleMenuBreakpointChange = () => {
+    if (!mobileMenuQuery.matches) closeMenu();
+    syncMenuAccessibility();
+  };
+
+  if (typeof mobileMenuQuery.addEventListener === 'function') {
+    mobileMenuQuery.addEventListener('change', handleMenuBreakpointChange);
+  } else if (typeof mobileMenuQuery.addListener === 'function') {
+    mobileMenuQuery.addListener(handleMenuBreakpointChange);
+  }
 }
 
 const faqButtons = document.querySelectorAll('.faq-button');
@@ -78,6 +110,22 @@ document.querySelectorAll('.instagram-link').forEach((link) => {
 document.querySelectorAll('.email-link').forEach((link) => {
   link.addEventListener('click', () => trackSiteEvent('email_click', { href: link.href }));
 });
+
+document.querySelectorAll('.form-link').forEach((link) => {
+  link.addEventListener('click', () => trackSiteEvent('form_click', { href: link.href }));
+});
+
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+  backToTop.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: prefersReduced ? 'auto' : 'smooth'
+    });
+  });
+}
 
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
