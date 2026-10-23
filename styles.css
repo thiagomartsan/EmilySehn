@@ -111,7 +111,7 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .hero-meta span+span::before{content:"·";position:absolute;left:-13px}
 .hero-portrait{position:relative;justify-self:end;width:min(100%,430px);margin:0;align-self:center;padding:14px 14px 38px;border:1px solid rgba(38,26,18,.18);border-radius:190px 190px 34px 34px;background:rgba(255,250,243,.22);box-shadow:0 28px 70px rgba(67,43,22,.16)}
 .hero-portrait__frame{overflow:hidden;border-radius:176px 176px 24px 24px;background:var(--paper-2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
-.hero-portrait__frame img{width:100%;aspect-ratio:1.02/1;object-fit:cover;object-position:center 42%;transform:scale(1.012)}
+.hero-portrait__frame img{width:100%;aspect-ratio:1.02/1;object-fit:cover;object-position:center 36%;transform:scale(1.012)}
 .hero-portrait figcaption{position:absolute;left:28px;bottom:11px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(38,26,18,.72)}
 .hero-portrait__flower{position:absolute;width:88px;height:auto;right:-24px;bottom:-28px;filter:drop-shadow(0 12px 20px rgba(72,45,20,.16));animation:flowerDrift 11s ease-in-out infinite}
 .floating-flower{position:absolute;pointer-events:none;user-select:none;will-change:transform}
@@ -198,6 +198,7 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .attendance-panel--dark .attendance-label{color:var(--sun-2)}
 .attendance-panel h3{margin:0 0 16px;font-size:clamp(2rem,3vw,3rem);font-weight:650;letter-spacing:-.04em}
 .attendance-panel>div>p:not(.attendance-label){max-width:500px;margin:0;color:rgba(44,33,26,.72)}
+.attendance-detail{margin-top:14px!important}
 .attendance-panel--dark>div>p:not(.attendance-label){color:rgba(255,253,249,.72)}
 .attendance-meta{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
 .attendance-meta span{padding:7px 10px;border:1px solid rgba(44,33,26,.14);border-radius:999px;font-size:.74rem;font-weight:700}

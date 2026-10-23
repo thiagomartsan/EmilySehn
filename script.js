@@ -98,12 +98,6 @@ function trackSiteEvent(eventName, params = {}) {
 document.querySelectorAll('.wa-link').forEach((link) => {
   link.addEventListener('click', () => trackSiteEvent('whatsapp_click', { href: link.href }));
 });
-document.querySelectorAll('.map-link').forEach((link) => {
-  link.addEventListener('click', () => trackSiteEvent('maps_click', { href: link.href }));
-});
-document.querySelectorAll('.waze-link').forEach((link) => {
-  link.addEventListener('click', () => trackSiteEvent('waze_click', { href: link.href }));
-});
 document.querySelectorAll('.instagram-link').forEach((link) => {
   link.addEventListener('click', () => trackSiteEvent('instagram_click', { href: link.href }));
 });
