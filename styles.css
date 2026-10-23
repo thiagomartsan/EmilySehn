@@ -109,11 +109,11 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;color:rgba(44,33,26,.6);font-size:.76rem}
 .hero-meta span+span{position:relative}
 .hero-meta span+span::before{content:"·";position:absolute;left:-13px}
-.hero-portrait{position:relative;justify-self:end;width:min(100%,430px);margin:0;align-self:center;padding:14px 14px 38px;border:1px solid rgba(38,26,18,.18);border-radius:190px 190px 34px 34px;background:rgba(255,250,243,.22);box-shadow:0 28px 70px rgba(67,43,22,.16)}
-.hero-portrait__frame{overflow:hidden;border-radius:176px 176px 24px 24px;background:var(--paper-2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
-.hero-portrait__frame img{width:100%;aspect-ratio:1.02/1;object-fit:cover;object-position:center 36%;transform:scale(1.012)}
-.hero-portrait figcaption{position:absolute;left:28px;bottom:11px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(38,26,18,.72)}
-.hero-portrait__flower{position:absolute;width:88px;height:auto;right:-24px;bottom:-28px;filter:drop-shadow(0 12px 20px rgba(72,45,20,.16));animation:flowerDrift 11s ease-in-out infinite}
+.hero-portrait{position:relative;justify-self:end;width:min(100%,372px);margin:0;align-self:center;padding:12px 12px 36px;border:1px solid rgba(38,26,18,.18);border-radius:182px 182px 34px 34px;background:rgba(255,250,243,.22);box-shadow:0 28px 70px rgba(67,43,22,.16)}
+.hero-portrait__frame{overflow:hidden;border-radius:170px 170px 24px 24px;background:var(--paper-2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.hero-portrait__frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center center;transform:scale(1)}
+.hero-portrait figcaption{position:absolute;left:26px;bottom:12px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(38,26,18,.72)}
+.hero-portrait__flower{position:absolute;width:84px;height:auto;right:-22px;bottom:-26px;filter:drop-shadow(0 12px 20px rgba(72,45,20,.16));animation:flowerDrift 11s ease-in-out infinite}
 .floating-flower{position:absolute;pointer-events:none;user-select:none;will-change:transform}
 .floating-flower--hero{z-index:2;width:190px;right:23%;top:7%;opacity:.95;animation:flowerDrift 12s ease-in-out infinite}
 .petal{position:absolute;z-index:2;width:18px;height:8px;border-radius:100% 0 100% 0;background:rgba(108,71,41,.52);transform:rotate(25deg);animation:petalDrift 10s ease-in-out infinite}
@@ -175,11 +175,16 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .about-band--cream{right:0;width:64%;background:var(--cream)}
 .about-grid{position:relative;z-index:2;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:clamp(48px,7vw,94px)}
 .about-photo-wrap{position:relative;width:min(100%,340px);justify-self:center}
-.about-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:44% 44% 24px 24px;box-shadow:0 24px 60px rgba(45,31,20,.16)}
+.about-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:44% 44% 24px 24px;box-shadow:0 24px 60px rgba(45,31,20,.16)}
 .about-caption{position:absolute;left:18px;bottom:18px;padding:8px 12px;border-radius:999px;background:rgba(255,253,249,.9);font-size:.7rem;font-weight:750;color:var(--brown)}
 .about-copy{max-width:700px}
 .about-copy h2{margin:0 0 18px;font-size:clamp(2.4rem,4.4vw,4.2rem)}
 .about-copy p{margin:0 0 14px}
+.about-lead{font-size:1.04rem;font-weight:650;color:var(--ink)}
+.about-copy h3{margin:22px 0 10px;font-family:var(--sans);font-size:1rem;font-weight:800;letter-spacing:.02em;color:var(--brown)}
+.about-list{margin:0 0 18px;padding-left:18px;display:grid;gap:10px;color:rgba(44,33,26,.78)}
+.about-list li::marker{color:var(--sun)}
+.about-summary{max-width:62ch}
 .practice-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
 .practice-tags span{padding:8px 12px;border:1px solid rgba(108,71,41,.17);border-radius:999px;background:rgba(255,255,255,.55);font-size:.76rem;font-weight:750;color:var(--brown)}
 
@@ -220,11 +225,11 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .faq-panel p{margin:0;color:rgba(44,33,26,.7);font-size:.94rem}
 
 /* CTA final */
-.final-cta{position:relative;overflow:hidden;padding:clamp(64px,7vw,90px) 0;background:linear-gradient(90deg,var(--dark) 0 68%,#6b482c 68% 100%);color:var(--white)}
-.final-cta-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px}
+.final-cta{position:relative;overflow:hidden;padding:clamp(64px,7vw,90px) 0;background:linear-gradient(90deg,var(--dark) 0 82%,#6b482c 82% 100%);color:var(--white)}
+.final-cta-grid{position:relative;z-index:3;display:grid;grid-template-columns:minmax(0,1.34fr) 280px;align-items:center;gap:44px}
 .final-cta h2{margin:0 0 12px;max-width:720px;font-size:clamp(2.35rem,4.3vw,4.3rem)}
 .final-cta p{max-width:620px;margin:0;color:rgba(255,253,249,.7)}
-.final-cta-action{display:grid;justify-items:start;gap:12px}
+.final-cta-action{display:grid;justify-items:start;align-content:center;justify-self:start;gap:12px;padding-left:0;max-width:280px}
 .final-cta-action span{color:rgba(255,253,249,.55);font-size:.77rem}
 .floating-flower--final{z-index:2;width:210px;right:5%;top:-40px;opacity:.18;animation:flowerDrift 13s ease-in-out infinite reverse}
 
@@ -299,7 +304,7 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
   .hero-meta{display:grid;gap:3px}
   .hero-meta span+span::before{display:none}
   .hero-portrait__flower{width:72px;right:-16px;bottom:-22px}
-  .hero-portrait{justify-self:center;width:min(82vw,390px);margin-top:14px}
+  .hero-portrait{justify-self:center;width:min(84vw,336px);margin-top:14px}
       .floating-flower--hero{top:auto;bottom:9%;right:4%;width:118px;opacity:.78}
   .petal--1{right:36%;top:auto;bottom:14%}.petal--2{right:9%;bottom:21%}.petal--3{right:48%;bottom:6%}
 
@@ -349,7 +354,7 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
   .final-cta{background:var(--dark)}
   .final-cta-grid{grid-template-columns:1fr;gap:32px}
   .final-cta h2{font-size:clamp(2.2rem,9vw,3.2rem)}
-  .final-cta-action{justify-items:stretch}
+  .final-cta-action{justify-items:stretch;padding-left:0}
   .final-cta-action .button{width:100%}
   .floating-flower--final{right:-48px;width:150px;opacity:.15}
 

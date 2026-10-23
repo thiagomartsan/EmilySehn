@@ -43,3 +43,10 @@ Landing page estática em HTML, CSS e JavaScript puro.
 - atendimento online especifica Google Meet, WhatsApp em situações excepcionais e requisitos de privacidade/conexão;
 - localização alterada de Porto Alegre para Maringá;
 - CRP 07/44521 mantido provisoriamente até confirmação da situação cadastral no Paraná.
+
+
+## Ajustes V5.5
+- Hero: foto pré-recortada para reduzir cenário superior, elevar o rosto no quadro e preservar mais tronco.
+- Sobre: removida duplicidade de “Sobre mim”.
+- Formatura: substituída pela imagem original de maior qualidade, com crop vertical preservando capelo, rosto e diploma.
+- CTA final desktop: ação deslocada integralmente para a faixa marrom da direita; mobile preservado.
