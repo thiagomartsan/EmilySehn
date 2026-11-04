@@ -59,10 +59,17 @@ Landing page estática em HTML, CSS e JavaScript puro.
 - Mantidos noindex/nofollow e layout responsivo.
 
 
-## V5.8 — produção/SEO
+## V5.9 — produção/SEO
 - Indexação ativada no domínio temporário `https://emilysehn.vercel.app/`.
 - Canonical, Open Graph URL/imagem, Twitter Card e sitemap adicionados.
 - `robots.txt` aponta para o sitemap.
 - Telefone, e-mail e @ removidos do texto visível e do JSON-LD.
 - Contatos acionados por ícones/CTAs via JavaScript com ofuscação leve para reduzir raspagem trivial.
 - Quando houver domínio próprio: atualizar canonical, OG URL, sitemap e redirecionar o domínio Vercel para o novo domínio.
+
+
+## V5.9
+- Corrigido ícone do WhatsApp na barra superior após migração para botões JS.
+- Restaurados os estilos originais dos CTAs de WhatsApp: marrom no hero e amarelo no CTA final.
+- Restaurado o estilo do botão de atendimento presencial.
+- Mantidas as melhorias de SEO e proteção contra raspagem trivial da V5.8.
