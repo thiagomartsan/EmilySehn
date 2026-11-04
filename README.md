@@ -50,3 +50,10 @@ Landing page estática em HTML, CSS e JavaScript puro.
 - Sobre: removida duplicidade de “Sobre mim”.
 - Formatura: substituída pela imagem original de maior qualidade, com crop vertical preservando capelo, rosto e diploma.
 - CTA final desktop: ação deslocada integralmente para a faixa marrom da direita; mobile preservado.
+
+
+## V5.7
+- Nova seção de reconhecimento após a hero.
+- Fluxo: reconhecimento → psicoterapia → sobre → primeiro contato → modalidades.
+- FAQ enxuto e atendimento mais escaneável.
+- Mantidos noindex/nofollow e layout responsivo.
