@@ -45,7 +45,7 @@ if (menuToggle && nav) {
     }
   });
 
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  nav.querySelectorAll('a, button[data-contact]').forEach((link) => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
   });
@@ -95,16 +95,6 @@ function trackSiteEvent(eventName, params = {}) {
   }
 }
 
-document.querySelectorAll('.wa-link').forEach((link) => {
-  link.addEventListener('click', () => trackSiteEvent('whatsapp_click', { href: link.href }));
-});
-document.querySelectorAll('.instagram-link').forEach((link) => {
-  link.addEventListener('click', () => trackSiteEvent('instagram_click', { href: link.href }));
-});
-document.querySelectorAll('.email-link').forEach((link) => {
-  link.addEventListener('click', () => trackSiteEvent('email_click', { href: link.href }));
-});
-
 document.querySelectorAll('.form-link').forEach((link) => {
   link.addEventListener('click', () => trackSiteEvent('form_click', { href: link.href }));
 });
@@ -120,6 +110,52 @@ if (backToTop) {
     });
   });
 }
+
+
+
+// Contatos montados somente no clique para reduzir raspagem trivial no HTML.
+// Isto é ofuscação leve, não uma barreira contra bots capazes de executar JavaScript.
+const decodeChars = (codes) => String.fromCharCode(...codes);
+const contactParts = {
+  phone: [53,53,53,49,57,57,55,55,55,50,51,54,51],
+  emailUser: [112,115,105,101,109,105,108,121,115,101,104,110],
+  emailHost: [103,109,97,105,108,46,99,111,109],
+  instagram: [101,109,105,95,112,115,105]
+};
+const phone = decodeChars(contactParts.phone);
+const email = `${decodeChars(contactParts.emailUser)}@${decodeChars(contactParts.emailHost)}`;
+const instagramHandle = decodeChars(contactParts.instagram);
+
+const whatsappMessages = {
+  'whatsapp-general': 'Oi, Emily. Encontrei seu trabalho pelo site e gostaria de saber mais sobre os atendimentos.',
+  'whatsapp-presencial': 'Oi, Emily. Gostaria de consultar disponibilidade para atendimento presencial em Maringá.',
+  'whatsapp-online': 'Oi, Emily. Gostaria de consultar disponibilidade para atendimento online.'
+};
+
+function contactDestination(kind) {
+  if (kind === 'instagram') return `https://www.instagram.com/${instagramHandle}/`;
+  if (kind === 'email') return `mailto:${email}`;
+  if (kind.startsWith('whatsapp')) {
+    const message = whatsappMessages[kind] || whatsappMessages['whatsapp-general'];
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  }
+  return null;
+}
+
+document.querySelectorAll('[data-contact]').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const kind = trigger.dataset.contact;
+    const destination = contactDestination(kind);
+    if (!destination) return;
+    const eventName = kind === 'instagram' ? 'instagram_click' : kind === 'email' ? 'email_click' : 'whatsapp_click';
+    trackSiteEvent(eventName, { contact_type: kind });
+    if (kind === 'email') {
+      window.location.href = destination;
+    } else {
+      window.open(destination, '_blank', 'noopener,noreferrer');
+    }
+  });
+});
 
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());

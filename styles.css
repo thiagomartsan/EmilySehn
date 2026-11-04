@@ -410,3 +410,20 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 .final-form-link{color:rgba(255,253,249,.82);font-size:.8rem;font-weight:750;text-underline-offset:4px}
 .final-form-link:hover{color:var(--sun-2)}
 .form-link:focus-visible{outline:3px solid var(--sun);outline-offset:4px}
+
+
+/* V5.8 — contatos discretos e proteção contra raspagem trivial */
+.contact-trigger{appearance:none;-webkit-appearance:none;border:0;background:none;color:inherit;font:inherit;cursor:pointer;padding:0}
+.contact-links .contact-link{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;transition:color .2s ease,background .2s ease,transform .2s ease}
+.contact-links .contact-link:hover{color:var(--sun-2);background:rgba(255,255,255,.07);transform:translateY(-1px)}
+.contact-links .contact-link svg{width:16px;height:16px}
+.nav>button{position:relative;text-decoration:none;font-size:.84rem;font-weight:650;letter-spacing:.01em}
+.nav>button.header-cta{padding:10px 16px;border-radius:999px;background:var(--brown);color:white}
+.nav>button.header-cta:hover{background:var(--dark)}
+.footer-contact{display:flex;align-items:center;gap:12px}
+.footer-contact__icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.14);border-radius:14px;color:rgba(255,253,249,.78);transition:color .2s ease,border-color .2s ease,transform .2s ease}
+.footer-contact__icon:hover{color:var(--sun-2);border-color:rgba(243,217,130,.45);transform:translateY(-2px)}
+.footer-contact__icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.footer-contact__icon[data-contact^="whatsapp"] svg{fill:currentColor;stroke:none}
+.floating-wa.contact-trigger{padding:0}
+@media(max-width:1020px){.nav>button{padding:12px 4px;font-size:1.08rem}.nav>button.header-cta{margin-top:12px;text-align:center}}

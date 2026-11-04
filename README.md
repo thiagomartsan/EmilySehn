@@ -57,3 +57,12 @@ Landing page estática em HTML, CSS e JavaScript puro.
 - Fluxo: reconhecimento → psicoterapia → sobre → primeiro contato → modalidades.
 - FAQ enxuto e atendimento mais escaneável.
 - Mantidos noindex/nofollow e layout responsivo.
+
+
+## V5.8 — produção/SEO
+- Indexação ativada no domínio temporário `https://emilysehn.vercel.app/`.
+- Canonical, Open Graph URL/imagem, Twitter Card e sitemap adicionados.
+- `robots.txt` aponta para o sitemap.
+- Telefone, e-mail e @ removidos do texto visível e do JSON-LD.
+- Contatos acionados por ícones/CTAs via JavaScript com ofuscação leve para reduzir raspagem trivial.
+- Quando houver domínio próprio: atualizar canonical, OG URL, sitemap e redirecionar o domínio Vercel para o novo domínio.
