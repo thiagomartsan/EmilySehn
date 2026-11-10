@@ -337,14 +337,14 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
   .recognition-item{padding:20px 18px 21px}
   .recognition-note{padding-top:20px}
 
-  .clinical{min-height:auto}
-  .clinical-split--dark{width:100%;height:48%;bottom:auto}
-  .clinical-split--sand{top:auto;bottom:0;width:100%;height:52%}
-  .clinical-inner{grid-template-columns:1fr;gap:76px;padding-block:64px}
-  .clinical-title{padding-right:0}
-  .clinical-copy{padding-left:0}
+  .clinical{min-height:auto;background:var(--dark)}
+  .clinical-split{display:none}
+  .clinical-inner{width:100%;max-width:none;margin:0;grid-template-columns:1fr;gap:0;padding:0}
+  .clinical-title{padding:64px 14px 56px;background:var(--dark)}
+  .clinical-copy{max-width:none;padding:50px 14px 62px;background:var(--paper-2);color:var(--ink)}
+  .clinical-copy p{max-width:620px;margin-inline:auto}
   .clinical h2{font-size:clamp(2.05rem,9vw,3.2rem)}
-  .floating-flower--clinical{left:auto;right:-30px;bottom:40%;width:125px}
+  .floating-flower--clinical{display:none}
 
   .process-head{margin-bottom:36px}
   .process-head h2{font-size:clamp(2rem,9vw,3rem)}
