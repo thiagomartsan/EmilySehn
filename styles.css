@@ -466,62 +466,67 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
 }
 
 
-/* V6.1 — enquadramento final da foto da hero */
+
+/* V6.2 — mantém a moldura aprovada e aplica apenas zoom/crop na foto */
 @media (min-width:761px){
   .hero-portrait{
-    width:min(100%,342px);
-    padding:11px 11px 36px;
-    border-radius:176px 176px 32px 32px;
+    width:min(100%,372px);
+    padding:12px 12px 36px;
+    border-radius:182px 182px 34px 34px;
   }
   .hero-portrait__frame{
-    width:292px;
-    max-width:100%;
-    aspect-ratio:.74/1;
-    margin-inline:auto;
-    border-radius:150px 150px 22px 22px;
+    width:100%;
+    aspect-ratio:4/5;
+    margin:0;
+    overflow:hidden;
+    border-radius:170px 170px 24px 24px;
   }
   .hero-portrait__frame img{
     width:100%;
     height:100%;
     aspect-ratio:auto;
     object-fit:cover;
-    object-position:50% 23%;
-    transform:scale(1.16);
-    transform-origin:50% 28%;
+    object-position:center center;
+    transform:scale(1.45);
+    transform-origin:50% 62%;
   }
   .hero-portrait figcaption{
-    left:24px;
+    left:26px;
+    font-size:.72rem;
   }
 }
 
 @media (max-width:760px){
   .hero-portrait{
-    width:min(78vw,286px);
-    padding:10px 10px 34px;
-    border-radius:148px 148px 30px 30px;
+    justify-self:center;
+    width:min(84vw,336px);
+    margin-top:14px;
+    padding:12px 12px 36px;
+    border-radius:170px 170px 32px 32px;
   }
   .hero-portrait__frame{
-    width:min(100%,236px);
-    aspect-ratio:.74/1;
-    margin-inline:auto;
-    border-radius:122px 122px 20px 20px;
+    width:100%;
+    aspect-ratio:4/5;
+    margin:0;
+    overflow:hidden;
+    border-radius:158px 158px 22px 22px;
   }
   .hero-portrait__frame img{
     width:100%;
     height:100%;
     aspect-ratio:auto;
     object-fit:cover;
-    object-position:50% 21%;
-    transform:scale(1.17);
-    transform-origin:50% 26%;
+    object-position:center center;
+    transform:scale(1.48);
+    transform-origin:50% 62%;
   }
   .hero-portrait figcaption{
-    left:20px;
-    font-size:.66rem;
+    left:24px;
+    font-size:.68rem;
   }
   .hero-portrait__flower{
-    right:-10px;
-    bottom:-20px;
-    width:66px;
+    width:72px;
+    right:-16px;
+    bottom:-22px;
   }
 }
