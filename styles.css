@@ -530,3 +530,32 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
     bottom:-22px;
   }
 }
+
+
+/* Crédito de desenvolvimento TM21 */
+.footer-credit{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  color:rgba(255,253,249,.72);
+  text-decoration:none;
+  font-size:.76rem;
+  transition:color .2s ease,transform .2s ease;
+}
+.footer-credit strong{
+  color:var(--sun-2);
+  font-weight:800;
+}
+.footer-credit:hover{
+  color:var(--white);
+  transform:translateY(-1px);
+}
+.footer-credit:focus-visible{
+  outline:3px solid var(--sun);
+  outline-offset:4px;
+  border-radius:6px;
+}
+@media(max-width:760px){
+  .footer-credit{order:2}
+  .back-to-top{order:3}
+}
