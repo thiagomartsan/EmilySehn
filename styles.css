@@ -487,8 +487,8 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
     aspect-ratio:auto;
     object-fit:cover;
     object-position:center center;
-    transform:scale(1.45);
-    transform-origin:50% 62%;
+    transform:scale(1.32);
+    transform-origin:50% 56%;
   }
   .hero-portrait figcaption{
     left:26px;
@@ -517,8 +517,8 @@ h1,h2,h3{margin-top:0;text-wrap:balance}
     aspect-ratio:auto;
     object-fit:cover;
     object-position:center center;
-    transform:scale(1.48);
-    transform-origin:50% 62%;
+    transform:scale(1.34);
+    transform-origin:50% 55%;
   }
   .hero-portrait figcaption{
     left:24px;
